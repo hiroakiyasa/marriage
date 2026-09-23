@@ -187,6 +187,45 @@
     .happyCopy h3{margin:15px 0;font-family:var(--serif);font-size:35px;font-weight:500;line-height:1.55}
     .happyCopy p{color:#eee0dc;font-size:13px;line-height:2}
 
+    .priceIntro{position:relative;z-index:2;max-width:800px;margin:0 auto 48px;text-align:center}
+    .priceIntro .eyebrow{justify-content:center}.priceIntro .eyebrow:before{display:none}
+    .priceIntro h2{margin:14px 0 14px}.priceIntro p{margin:0;color:var(--muted);font-size:14px}
+    .planComparison{position:relative;z-index:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+    .planCard{position:relative;overflow:hidden;padding:30px;border-radius:32px;background:rgba(255,255,255,.94);border:1px solid #ead9d5;box-shadow:var(--shadow)}
+    .planCard.standard{border-color:#dfb5b1;box-shadow:0 26px 75px rgba(119,69,69,.14)}
+    .planCard>.artBg{inset:auto -22% -18% 28%;width:620px;height:620px;border-radius:50%;opacity:.13}
+    .planCard>*:not(.artBg){position:relative;z-index:2}
+    .comparePlanHead{padding:2px 2px 22px;border-bottom:1px solid var(--line)}
+    .comparePlanHead span{display:block;color:#b78982;font-size:9px;font-weight:800;letter-spacing:.22em}
+    .comparePlanHead h3{margin:5px 0 0;font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:.04em}
+    .feeGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .feeItem{padding:19px 14px;border-bottom:1px solid var(--line)}
+    .feeItem:nth-child(odd){border-right:1px solid var(--line)}
+    .feeItem.wide{grid-column:1/-1;border-right:0}
+    .feeItem small{display:block;color:var(--muted);font-size:10px}
+    .feeItem strong{display:block;margin-top:5px;font-family:var(--serif);font-size:25px;font-weight:600}
+    .feeItem.accent strong{color:var(--rose)}
+    .comparePlanContent{margin-top:22px;padding:22px;border-radius:22px;background:rgba(255,250,248,.84);border:1px solid #efded9}
+    .comparePlanContent h4{margin:0 0 15px;font-family:var(--serif);font-size:20px;font-weight:600}
+    .comparePlanItems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+    .comparePlanItem{position:relative;padding:11px 11px 11px 31px;border-radius:13px;background:rgba(255,255,255,.82);color:#6f5d58;font-size:11px;line-height:1.65}
+    .comparePlanItem:before{content:"✓";position:absolute;left:11px;top:10px;color:#b45f69;font-weight:800}
+    .comparePlanItem span{display:block;margin-top:3px;color:#8e7771;font-size:10px}
+    .comparePlanItem.emphasis{grid-column:1/-1;color:var(--rose);font-weight:700;background:#fff}
+    .comparePlanItem.wideItem{grid-column:1/-1}
+    .legalWrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+    .legalBox{padding:28px;border-radius:26px;background:rgba(255,255,255,.9);border:1px solid #eadbd7;box-shadow:0 12px 36px rgba(84,57,51,.05)}
+    .legalBox h3{margin:0 0 17px;font-family:var(--serif);font-size:21px;font-weight:600}
+    .legalBox p{margin:0 0 12px;color:#7f6c66;font-size:11px;line-height:1.9}
+    .legalBox p:last-child{margin-bottom:0}.legalIndent{padding-left:8px}
+    .definitions{display:grid;gap:0;margin:0}
+    .definitions div{padding:12px 0;border-bottom:1px solid var(--line)}
+    .definitions div:last-child{border-bottom:0}
+    .definitions dt{font-family:var(--serif);font-size:14px;font-weight:700;color:#725b55}
+    .definitions dd{margin:4px 0 0;color:#87736d;font-size:11px;line-height:1.8}
+    .priceContact{position:relative;z-index:2;margin-top:24px;padding:23px 26px;border-radius:24px;background:rgba(255,255,255,.86);border:1px solid #eadbd7;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .priceContact p{margin:0;color:var(--muted);font-size:12px}
+
     .contact{background:#fffdfb}
     .contact .artBg{inset:0;opacity:.22}
     .contactGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -222,6 +261,8 @@
       .supportGrid{grid-template-columns:1fr 1fr}
       .steps{grid-template-columns:repeat(2,1fr)}
       .priceLead{position:static}
+      .planComparison{grid-template-columns:1fr}
+      .legalWrap{grid-template-columns:1fr}
       .happyBand{grid-template-columns:1fr}
       .happyBand img{min-height:360px;order:2}
     }
@@ -271,6 +312,16 @@
       .planItems{grid-template-columns:1fr}
       .planItem.emphasis{grid-column:auto}
       .planContent{padding:18px}
+      .planCard{padding:20px}
+      .feeGrid{grid-template-columns:1fr}
+      .feeItem:nth-child(odd){border-right:0}
+      .feeItem.wide{grid-column:auto}
+      .comparePlanItems{grid-template-columns:1fr}
+      .comparePlanItem.emphasis,.comparePlanItem.wideItem{grid-column:auto}
+      .comparePlanContent{padding:18px}
+      .legalBox{padding:22px 19px}
+      .priceContact{display:block;padding:20px}
+      .priceContact .btn{width:100%;margin-top:14px}
       .futureHead{padding:36px 24px}
       .happyCopy{padding:36px 28px}
       .contactGrid{grid-template-columns:1fr}
@@ -307,9 +358,9 @@
             <a class="btn btnGhost" href="#price">料金を見る <span>↓</span></a>
           </div>
           <div class="stats">
-            <div class="stat"><b>月20回</b><span>お見合い申し込み</span></div>
-            <div class="stat"><b>何回でも</b><span>電話・LINE・メール相談</span></div>
-            <div class="stat"><b>0円</b><span>サポート活動費</span></div>
+            <div class="stat"><b>2プラン</b><span>シンプル・スタンダード</span></div>
+            <div class="stat"><b>11,000円</b><span>月会費</span></div>
+            <div class="stat"><b>LINE・メール</b><span>何回でも相談OK</span></div>
           </div>
         </div>
         <div class="heroVisual reveal">
@@ -352,8 +403,8 @@
         <div class="supportGrid">
           <article class="supportCard reveal"><div class="cardArt art4"></div><span class="supportNum">SUPPORT 01</span><h3>初回コンサルティング・分析</h3><p>最初にしっかりお話を伺い、今の状況や希望を整理しながら婚活の進め方を一緒に考えます。</p></article>
           <article class="supportCard reveal"><div class="cardArt art5"></div><span class="supportNum">SUPPORT 02</span><h3>プロフィール作成</h3><p>あなたらしい魅力が自然に伝わるプロフィールづくりを丁寧にサポートします。</p></article>
-          <article class="supportCard reveal"><div class="cardArt art6"></div><span class="supportNum">SUPPORT 03</span><h3>お見合い申し込み <strong>月20回</strong></h3><p>お見合いの日程調整まで含めて、出会いへつながる活動をスムーズに進めます。</p></article>
-          <article class="supportCard reveal"><div class="cardArt art7"></div><span class="supportNum">SUPPORT 04</span><h3>婚活サポート</h3><p>電話・LINE・メールで何回でも相談OK。活動中の迷いや不安を抱え込まずに進められます。</p></article>
+          <article class="supportCard reveal"><div class="cardArt art6"></div><span class="supportNum">SUPPORT 03</span><h3>お見合い申し込み・日程調整</h3><p>シンプルプランは月10回。スタンダードプランはお見合い申し込み無料で、日程調整までサポートします。</p></article>
+          <article class="supportCard reveal"><div class="cardArt art7"></div><span class="supportNum">SUPPORT 04</span><h3>婚活サポート</h3><p>シンプルプランは電話15分まで、LINE・メール何回でもOK。スタンダードプランは電話・LINE・メール何回でもOKです。</p></article>
         </div>
         <div class="supportAside reveal">「頑張らなきゃ」ではなく、<strong style="color:#b45f69">「私らしく進めよう」</strong>と思える婚活へ。</div>
       </div>
@@ -368,15 +419,6 @@
           <p>あなた自身が輝くこと。その先に、自然体で笑い合えるふたりの時間が続いていくこと。そんな未来を見据えて、明るくやわらかな世界観で活動を支えます。</p>
         </div>
       </div>
-    </section>
-
-    <section class="fullDream">
-      <div class="artBg art9"></div>
-      <div class="dreamCopy"><div class="reveal">
-        <div class="eyebrow">The day you dreamed of</div>
-        <h2>「この人と出会えてよかった」<br>そう思える未来へ。</h2>
-        <p>婚活の一歩一歩が、いつか大切な人と笑い合う時間につながります。あなたが心から安心できるご縁を、一緒に見つけていきましょう。</p>
-      </div></div>
     </section>
 
     <section class="section advisor" id="advisor">
@@ -394,6 +436,15 @@
       </div>
     </section>
 
+    <section class="fullDream">
+      <div class="artBg art9"></div>
+      <div class="dreamCopy"><div class="reveal">
+        <div class="eyebrow">The day you dreamed of</div>
+        <h2>「この人と出会えてよかった」<br>そう思える未来へ。</h2>
+        <p>婚活の一歩一歩が、いつか大切な人と笑い合う時間につながります。あなたが心から安心できるご縁を、一緒に見つけていきましょう。</p>
+      </div></div>
+    </section>
+
     <section class="section flow" id="flow">
       <div class="artBg art4"></div>
       <div class="inner">
@@ -407,8 +458,8 @@
           <div class="steps">
             <div class="step"><i>01</i><b>初回コンサルティング</b><span>希望や不安を伺い、活動のスタートを一緒に整理します。</span></div>
             <div class="step"><i>02</i><b>分析・プロフィール作成</b><span>あなたの魅力を整理し、出会いにつながるプロフィールを作成します。</span></div>
-            <div class="step"><i>03</i><b>お見合い申し込み<br>日程調整</b><span>お見合い申し込みは月20回。日程調整までサポートします。</span></div>
-            <div class="step"><i>04</i><b>婚活サポート</b><span>電話・LINE・メールで何回でも相談できます。</span></div>
+            <div class="step"><i>03</i><b>お見合い申し込み<br>日程調整</b><span>シンプルは月10回、スタンダードはお見合い申し込み無料。日程調整までサポートします。</span></div>
+            <div class="step"><i>04</i><b>婚活サポート</b><span>プラン内容に応じて、電話・LINE・メールで活動をサポートします。</span></div>
           </div>
         </div>
       </div>
@@ -416,38 +467,93 @@
 
     <section class="section priceSection" id="price">
       <div class="artBg art5"></div>
-      <div class="inner priceGridWrap">
-        <div class="priceLead reveal">
+      <div class="inner">
+        <div class="priceIntro reveal">
           <div class="eyebrow">Price</div>
-          <h2>シンプルプラン</h2>
-          <p>必要なサポートを分かりやすくまとめたシンプルな料金プランです。活動中は電話・LINE・メールで何回でもご相談いただけます。</p>
+          <h2>料金プラン</h2>
+          <p>活動スタイルに合わせて、シンプルプランとスタンダードプランの2つをご用意しています。</p>
+        </div>
+
+        <div class="planComparison">
+          <article class="planCard reveal">
+            <div class="artBg art6"></div>
+            <div class="comparePlanHead"><span>SIMPLE PLAN</span><h3>シンプルプラン</h3></div>
+            <div class="feeGrid">
+              <div class="feeItem"><small>入会金</small><strong>10,000円</strong></div>
+              <div class="feeItem"><small>登録料</small><strong>23,000円</strong></div>
+              <div class="feeItem accent"><small>サポート活動費</small><strong>0円</strong></div>
+              <div class="feeItem"><small>月会費</small><strong>11,000円</strong></div>
+              <div class="feeItem wide"><small>成婚料</small><strong>150,000円</strong></div>
+            </div>
+            <div class="comparePlanContent">
+              <h4>プラン内容</h4>
+              <div class="comparePlanItems">
+                <div class="comparePlanItem">初回コンサルティング</div>
+                <div class="comparePlanItem">分析</div>
+                <div class="comparePlanItem">プロフィール作成</div>
+                <div class="comparePlanItem">お見合い日程調整</div>
+                <div class="comparePlanItem">婚活サポート<span>電話15分まで<br>LINE、メール何回でもOK</span></div>
+                <div class="comparePlanItem emphasis">お見合い申し込み　月10回</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="planCard standard reveal">
+            <div class="artBg art8"></div>
+            <div class="comparePlanHead"><span>STANDARD PLAN</span><h3>スタンダードプラン</h3></div>
+            <div class="feeGrid">
+              <div class="feeItem"><small>入会金</small><strong>10,000円</strong></div>
+              <div class="feeItem"><small>登録料</small><strong>20,000円</strong></div>
+              <div class="feeItem accent"><small>活動サポート費</small><strong>36,000円</strong></div>
+              <div class="feeItem"><small>月会費</small><strong>11,000円</strong></div>
+              <div class="feeItem wide"><small>成婚料</small><strong>150,000円</strong></div>
+            </div>
+            <div class="comparePlanContent">
+              <h4>プラン内容</h4>
+              <div class="comparePlanItems">
+                <div class="comparePlanItem">初回コンサルティング</div>
+                <div class="comparePlanItem">分析</div>
+                <div class="comparePlanItem">プロフィール作成</div>
+                <div class="comparePlanItem">お見合い日程調整</div>
+                <div class="comparePlanItem">婚活サポート<span>電話、LINE、メール何回でもOK</span></div>
+                <div class="comparePlanItem emphasis">お見合い申し込み　全て無料</div>
+                <div class="comparePlanItem">プロフィール写真撮影同行</div>
+                <div class="comparePlanItem">定期面談　月1回</div>
+                <div class="comparePlanItem wideItem">お買い物・美容院などの同行（ご希望の場合）</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="legalWrap reveal">
+          <div class="legalBox">
+            <h3>中途解約・クーリングオフについて</h3>
+            <p>※中途解約時には、特定商取引法に則り、返金対応致します。</p>
+            <p>※クーリングオフ：契約書を受領した日から8日間を経過するまでは、書面により会員登録に関する契約解除（クーリングオフ）ができます。その際、契約解除に伴う違約金または損害補償は発生しません。</p>
+            <p>※中途解約 クーリング・オフ期間の後も契約の解除ができます。契約が解除されたときは、特定商取引法に則り、以下に定める金額の他の請求は致しません。</p>
+            <p class="legalIndent">(1)その解除がサービス提供開始後である場合は次の合計額<br>・提供されたサービスの対価に相当する額<br>・2万円又は契約残額の20％のいずれか低い額</p>
+            <p class="legalIndent">(2)その解除がサービス提供開始前である場合　3万円</p>
+          </div>
+
+          <div class="legalBox definitionsBox">
+            <h3>各種サービス料金の定義</h3>
+            <dl class="definitions">
+              <div><dt>入会金</dt><dd>入会時に必要となる各種事務手続費用です。</dd></div>
+              <div><dt>登録料</dt><dd>プロフィール作成・及びお見合いシステムへの登録、その他登録掲載に要する料金です。</dd></div>
+              <div><dt>活動サポート費</dt><dd>活動開始時のサポートに必要な費用です。</dd></div>
+              <div><dt>月会費</dt><dd>システムの利用料・登録情報の管理等に要する必要です。</dd></div>
+              <div><dt>お見合い料</dt><dd>お見合い調整等のお見合い1回につき要する料金です。</dd></div>
+              <div><dt>成婚料</dt><dd>成婚に至ったときにお支払いしていただく料金です。</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="priceContact reveal">
+          <p>プラン内容や活動についてのご質問は、Instagramからお気軽にご相談ください。</p>
           <a class="btn btnPrimary" href="https://www.instagram.com/marriage_agency888?igsh=dmllMHQ5NDhkNm5n" target="_blank" rel="noopener">料金について相談 <span>↗</span></a>
         </div>
-        <div class="priceBox reveal">
-          <div class="artBg art6"></div>
-          <div class="planHead"><span>SIMPLE PLAN</span><h3>シンプルプラン</h3></div>
-          <div class="prices">
-            <div class="price"><small>入会金</small><strong>10,000円</strong></div>
-            <div class="price"><small>登録料</small><strong>23,000円</strong></div>
-            <div class="price hot"><small>サポート活動費</small><strong>0円</strong></div>
-            <div class="price"><small>月会費</small><strong>11,000円</strong></div>
-            <div class="price wide"><small>成婚料</small><strong>150,000円</strong></div>
-          </div>
-          <div class="planContent">
-            <h4>プラン内容</h4>
-            <div class="planItems">
-              <div class="planItem">初回コンサルティング</div>
-              <div class="planItem">分析</div>
-              <div class="planItem">プロフィール作成</div>
-              <div class="planItem">お見合い日程調整</div>
-              <div class="planItem">婚活サポート</div>
-              <div class="planItem">電話・LINE・メール何回でもOK</div>
-              <div class="planItem emphasis">お見合い申し込み　月20回</div>
-            </div>
-          </div>
-          <div class="priceNote">詳しい活動内容や料金についてはInstagramからご相談ください。</div>
-        </div>
       </div>
+
       <div class="inner happyBand reveal">
         <img src="assets/wedding/garden-walk.jpg" alt="夕暮れの庭園を歩く新郎新婦" loading="lazy">
         <div class="happyCopy"><div class="artBg art7"></div><div class="eyebrow" style="color:#f4d0d0">For your happiness</div><h3>出会うことは、<br>幸せの始まり。</h3><p>理想を押しつけるのではなく、あなたが自然体でいられる相手とのご縁を大切に。未来を焦らず、でも止まらず、一緒に進んでいきます。</p></div>
