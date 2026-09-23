@@ -131,14 +131,20 @@
 
     .advisor{background:#fffdfb}
     .advisor .artBg{width:700px;height:620px;right:-230px;top:20px;border-radius:46% 0 0 46%;opacity:.38}
-    .advisorGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
-    .advisorVisual{position:relative;padding:24px 0 0 24px}
+    .advisorGrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:72px;align-items:start}
+    .advisorVisual{position:sticky;top:125px;padding:24px 0 0 24px}
     .advisorVisual:before{content:"";position:absolute;inset:0 20% 20% 0;border:1px solid rgba(185,126,127,.48);border-radius:160px 160px 28px 28px}
     .advisorVisual img{position:relative;z-index:1;aspect-ratio:4/5;object-fit:cover;border-radius:160px 160px 28px 28px;box-shadow:var(--shadow)}
-    .advisorCopy p{color:var(--muted);font-family:var(--serif);font-size:16px;line-height:2.12}
-    .advisorName{margin:24px 0 4px;font-family:var(--serif);font-size:27px;letter-spacing:.08em}
-    .advisorRole{color:#b68680;font-size:10px;letter-spacing:.13em}
-    .quote{margin-top:25px;padding:22px 24px;border-left:3px solid #df9b9e;border-radius:0 18px 18px 0;background:rgba(255,255,255,.8);box-shadow:0 10px 30px rgba(88,60,55,.05);font-family:var(--serif);font-size:14px;line-height:2}
+    .advisorCopy>h2{margin-bottom:10px}
+    .advisorCopy p{color:var(--muted);font-family:var(--serif);font-size:15px;line-height:2.05}
+    .advisorRole{margin-bottom:26px;color:#b68680;font-size:10px;letter-spacing:.13em}
+    .advisorMessage{padding:30px 32px;border-radius:28px;background:rgba(255,255,255,.72);border:1px solid #edddd8;box-shadow:0 16px 48px rgba(88,60,55,.05)}
+    .advisorMessage p{margin:0 0 22px}
+    .advisorMessage p:last-child{margin-bottom:0}
+    .advisorLead{font-size:16px!important;color:#66524d!important}
+    .advisorQuestions{padding:18px 20px;border-left:3px solid #dfa0a2;border-radius:0 18px 18px 0;background:#fff9f7;color:#765d58!important}
+    .advisorClosing{font-size:16px!important;color:var(--rose)!important}
+    .advisorLine{margin-top:24px}
 
     .flow{background:#f8efed}
     .flow .artBg{inset:0;opacity:.23}
@@ -226,15 +232,37 @@
     .priceContact{position:relative;z-index:2;margin-top:24px;padding:23px 26px;border-radius:24px;background:rgba(255,255,255,.86);border:1px solid #eadbd7;display:flex;align-items:center;justify-content:space-between;gap:20px}
     .priceContact p{margin:0;color:var(--muted);font-size:12px}
 
+    .inquiry{background:#f8efed}
+    .inquiry .artBg{inset:0;opacity:.22}
+    .inquiryGrid{display:grid;grid-template-columns:.78fr 1.22fr;gap:54px;align-items:start}
+    .inquiryIntro{position:sticky;top:130px}
+    .inquiryIntro p{color:var(--muted);font-family:var(--serif);font-size:15px;line-height:2}
+    .lineDirect{margin-top:22px}
+    .inquiryForm{position:relative;z-index:2;padding:34px;border-radius:32px;background:rgba(255,255,255,.94);border:1px solid #ead9d5;box-shadow:var(--shadow)}
+    .formGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .field{display:grid;gap:8px}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:11px;font-weight:700;color:#715c57;letter-spacing:.04em}
+    .field input,.field textarea{width:100%;border:1px solid #e4d4d0;border-radius:15px;background:#fffdfc;color:var(--ink);font:inherit;font-size:14px;line-height:1.6;padding:13px 15px;outline:none;transition:border-color .2s,box-shadow .2s}
+    .field input:focus,.field textarea:focus{border-color:#d89598;box-shadow:0 0 0 4px rgba(216,149,152,.12)}
+    .field textarea{min-height:150px;resize:vertical}
+    .required{margin-left:5px;color:var(--rose);font-size:9px}
+    .formNote{margin:18px 0 0;color:#927b75;font-size:10px;line-height:1.8}
+    .formActions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px}
+    .formActions .btn{border:0;cursor:pointer}
+    .formStatus{min-height:20px;margin-top:8px;color:var(--rose);font-size:11px}
+
     .contact{background:#fffdfb}
     .contact .artBg{inset:0;opacity:.22}
-    .contactGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .contactGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .social{position:relative;min-height:200px;padding:28px;border-radius:26px;overflow:hidden;background:rgba(255,255,255,.9);border:1px solid #eadbd7;display:flex;flex-direction:column;justify-content:space-between;transition:.25s;box-shadow:0 10px 30px rgba(80,55,50,.04)}
     .social:hover{transform:translateY(-4px);box-shadow:var(--softshadow)}
     .social .miniArt{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.12}
     .social>*:not(.miniArt){position:relative;z-index:2}
     .social b{font-family:var(--serif);font-size:24px}
     .social span{color:var(--rose);font-size:11px}
+    .lineCard{border-color:#e5c7c2;background:rgba(255,253,250,.96)}
+    .lineCard b{color:var(--rose)}
 
     .finalCta{position:relative;min-height:650px;display:grid;align-items:center;overflow:hidden;background:url("assets/wedding/cta.jpg") 63% center/cover no-repeat}
     .finalCta:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fffaf8 0,rgba(255,250,248,.95) 37%,rgba(255,250,248,.56) 60%,rgba(255,250,248,.06) 84%)}
@@ -256,7 +284,10 @@
       .heroCopy{max-width:680px}
       .heroVisual{min-height:650px;width:min(640px,100%);margin:0 auto}
       .hero .artBg{inset:26% -25% -5% 0}
-      .introGrid,.advisorGrid,.priceGridWrap{grid-template-columns:1fr;gap:50px}
+      .introGrid,.advisorGrid,.priceGridWrap,.inquiryGrid{grid-template-columns:1fr;gap:50px}
+      .advisorVisual{position:relative;top:auto}
+      .inquiryIntro{position:relative;top:auto}
+      .contactGrid{grid-template-columns:repeat(2,1fr)}
       .brideFrame{width:min(560px,100%);margin:auto}
       .supportGrid{grid-template-columns:1fr 1fr}
       .steps{grid-template-columns:repeat(2,1fr)}
@@ -275,7 +306,10 @@
       .brand b{font-size:12px}.brand small{display:none}
       .nav>.btn{display:none}
       .section{padding:82px 16px}
-      .hero{padding:128px 16px 66px}
+      .hero{min-height:790px;padding:128px 16px 82px;background:linear-gradient(180deg,rgba(255,249,247,.97) 0%,rgba(255,249,247,.91) 34%,rgba(255,249,247,.70) 62%,rgba(255,249,247,.34) 100%),url("assets/wedding/hero.jpg") 66% center/cover no-repeat}
+      .hero .artBg{inset:0;opacity:.16;background-position:left top}
+      .heroVisual{display:none}
+      .heroCopy{padding:16px 0 118px}
       .hero h1{font-size:clamp(38px,10.8vw,42px);line-height:1.38}.hero h1 em{white-space:normal}
       .heroLead{font-size:15px}
       .heroActions{display:grid;grid-template-columns:1fr}
@@ -322,6 +356,11 @@
       .legalBox{padding:22px 19px}
       .priceContact{display:block;padding:20px}
       .priceContact .btn{width:100%;margin-top:14px}
+      .inquiryForm{padding:22px 18px}
+      .formGrid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .formActions{display:grid;grid-template-columns:1fr}
+      .formActions .btn{width:100%}
       .futureHead{padding:36px 24px}
       .happyCopy{padding:36px 28px}
       .contactGrid{grid-template-columns:1fr}
@@ -330,7 +369,8 @@
       .finalInner{width:calc(100% - 32px)}
       .footerInner{display:block}
       .footerInner small{display:block;margin-top:12px}
-      .mobileCta{position:fixed;z-index:70;display:flex;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom));height:56px;border-radius:999px;align-items:center;justify-content:center;background:linear-gradient(135deg,#a94f61,#dc8990);color:white;font-size:12px;font-weight:800;box-shadow:0 15px 36px rgba(150,67,80,.35)}
+      .mobileCta{position:fixed;z-index:70;display:flex;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom));height:56px;border-radius:999px;align-items:center;justify-content:center;background:linear-gradient(135deg,#a94f61,#dc8990);color:white;font-size:12px;font-weight:800;box-shadow:0 15px 36px rgba(150,67,80,.35);transition:opacity .25s,transform .25s}
+      .mobileCta.hidden{opacity:0;pointer-events:none;transform:translateY(18px)}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
   </style>
@@ -340,8 +380,8 @@
   <div class="navwrap">
     <nav class="nav" aria-label="メインナビゲーション">
       <a class="brand" href="#top"><span class="brandMark">愛</span><span><b>婚活アドバイザー 愛</b><small>MARRIAGE AGENCY</small></span></a>
-      <div class="navlinks"><a href="#concept">想い</a><a href="#support">サポート</a><a href="#advisor">アドバイザー</a><a href="#price">料金</a><a href="#sns">SNS</a></div>
-      <a class="btn btnPrimary" href="https://www.instagram.com/marriage_agency888?igsh=dmllMHQ5NDhkNm5n" target="_blank" rel="noopener">Instagramで相談 <span>↗</span></a>
+      <div class="navlinks"><a href="#concept">想い</a><a href="#support">サポート</a><a href="#advisor">アドバイザー</a><a href="#price">料金</a><a href="#inquiry">お問い合わせ</a><a href="#sns">SNS</a></div>
+      <a class="btn btnPrimary" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">LINEで相談 <span>↗</span></a>
     </nav>
   </div>
 
@@ -354,7 +394,7 @@
           <h1>あなたらしく、<br><em>愛される未来へ。</em></h1>
           <p class="heroLead">上質で、あたたかく、前向きに。あなたらしい魅力を大切にしながら、理想のご縁と幸せな結婚へ寄り添います。</p>
           <div class="heroActions">
-            <a class="btn btnPrimary" href="https://www.instagram.com/marriage_agency888?igsh=dmllMHQ5NDhkNm5n" target="_blank" rel="noopener">まずは相談する <span>↗</span></a>
+            <a class="btn btnPrimary" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">LINEで相談する <span>↗</span></a>
             <a class="btn btnGhost" href="#price">料金を見る <span>↓</span></a>
           </div>
           <div class="stats">
@@ -427,11 +467,24 @@
         <div class="advisorVisual reveal"><img src="assets/profile.jpg" alt="婚活アドバイザー 愛" loading="lazy"></div>
         <div class="advisorCopy reveal">
           <div class="eyebrow">Your adviser</div>
-          <h2>あなたの幸せな未来へ、<br>一歩ずつ。</h2>
-          <div class="advisorName">婚活アドバイザー 愛</div>
-          <div class="advisorRole">MARRIAGE ADVISER</div>
-          <p>心から安心できるご縁を大切に。自分らしく輝きながら、幸せな結婚へ進めるよう、相談しながら活動を支えます。</p>
-          <div class="quote">上質で、あたたかく、前向きに。あなたらしい魅力を大切にしながら、理想のご縁へ寄り添います。</div>
+          <h2>婚活アドバイザー 愛</h2>
+          <div class="advisorRole">IBJ正規加盟店 / AICHI & ONLINE</div>
+          <div class="advisorMessage">
+            <p class="advisorLead">愛知県を拠点に、IBJ正規加盟店の婚活アドバイザーとして活動しています。<br>愛知県内は対面、全国オンラインにも対応しています。</p>
+            <p>私は昔から、恋愛や結婚、夫婦について人と話すことが好きで、友人や職場、お客様から恋愛相談や人生相談を受ける機会も多く、これまでたくさんのお話を聞かせていただいてきました。</p>
+            <p>その中で感じたのは、婚活は「出会いを増やすだけ」では、なかなか前に進まないということ。</p>
+            <p class="advisorQuestions">なぜうまくいかないのか。<br>自分では気づいていない魅力や改善点はないか。<br>どんな相手が自分に合うのか。<br>そして、成婚までに何をどう変えていけばいいのか。</p>
+            <p>ここを一緒に整理し、具体的な行動につなげていくことが、婚活ではとても大切だと考えています。</p>
+            <p>私自身、人と人をつなぎ、誰かの人生の大切なパートナー探しに関われることに大きなやりがいを感じ、この仕事を始めさせていただきました。</p>
+            <p class="advisorQuestions">「結婚したいけれど出会いがない」<br>「婚活を始めたけれど、どう進めればいいかわからない」<br>「何度会っても交際につながらない」<br>「恋愛経験が少なく、婚活に自信がない」</p>
+            <p>そんな方にも、一人で悩み続けるのではなく、原因を一緒に整理しながら、その方に合った婚活の進め方を考えていきます。</p>
+            <p>婚活に、正解はありません。<br>大切なのは、周りと比べることではなく、自分に合った相手と、幸せな結婚につながる婚活をすること。</p>
+            <p>そして、10代・20代の頃に「もっと恋愛しておけばよかった」「もっといろんな経験をしておけばよかった」と、あとから後悔することがないように。</p>
+            <p>恋愛や結婚について、もっと早く知っておけばよかったと思えるようなことや、婚活に役立つ考え方、相手との向き合い方など、これからも恋愛や婚活にまつわる情報をお伝えしていけたら嬉しいです。</p>
+            <p class="advisorClosing">「もっと早く始めればよかった」と後悔する前に。<br>今の自分からできることを、一緒に見つけていけたら嬉しいです。</p>
+            <p>一つ一つの出会いを大切にしながら、成婚までしっかり伴走させていただきます。</p>
+          </div>
+          <a class="btn btnPrimary advisorLine" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">公式LINEで相談する <span>↗</span></a>
         </div>
       </div>
     </section>
@@ -549,8 +602,8 @@
         </div>
 
         <div class="priceContact reveal">
-          <p>プラン内容や活動についてのご質問は、Instagramからお気軽にご相談ください。</p>
-          <a class="btn btnPrimary" href="https://www.instagram.com/marriage_agency888?igsh=dmllMHQ5NDhkNm5n" target="_blank" rel="noopener">料金について相談 <span>↗</span></a>
+          <p>プラン内容や活動についてのご質問は、公式LINEからお気軽にご相談ください。</p>
+          <a class="btn btnPrimary" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">LINEで料金相談 <span>↗</span></a>
         </div>
       </div>
 
@@ -560,18 +613,65 @@
       </div>
     </section>
 
+    <section class="section inquiry" id="inquiry">
+      <div class="artBg art4"></div>
+      <div class="inner inquiryGrid">
+        <div class="inquiryIntro reveal">
+          <div class="eyebrow">LINE inquiry</div>
+          <h2>LINEでお問い合わせ</h2>
+          <p>必要事項を入力すると、婚活アドバイザー愛の公式LINEトーク画面に内容を引き継げます。入力内容を確認し、LINE上で送信してください。</p>
+          <a class="btn btnGhost lineDirect" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">公式LINEを直接開く <span>↗</span></a>
+        </div>
+        <form class="inquiryForm reveal" id="lineInquiryForm">
+          <div class="formGrid">
+            <div class="field">
+              <label for="inquiryName">お名前<span class="required">必須</span></label>
+              <input id="inquiryName" name="name" type="text" autocomplete="name" required placeholder="例：山田 花子">
+            </div>
+            <div class="field">
+              <label for="inquiryKana">ふりがな<span class="required">必須</span></label>
+              <input id="inquiryKana" name="kana" type="text" autocomplete="off" required placeholder="例：やまだ はなこ">
+            </div>
+            <div class="field">
+              <label for="inquiryEmail">メールアドレス<span class="required">必須</span></label>
+              <input id="inquiryEmail" name="email" type="email" autocomplete="email" required inputmode="email" placeholder="example@email.com">
+            </div>
+            <div class="field">
+              <label for="inquiryPhone">電話番号<span class="required">必須</span></label>
+              <input id="inquiryPhone" name="phone" type="tel" autocomplete="tel" required inputmode="tel" placeholder="090-1234-5678">
+            </div>
+            <div class="field full">
+              <label for="inquiryAddress">住所<span class="required">必須</span></label>
+              <input id="inquiryAddress" name="address" type="text" autocomplete="street-address" required placeholder="都道府県・市区町村・番地">
+            </div>
+            <div class="field full">
+              <label for="inquiryMessage">お問い合わせ内容<span class="required">必須</span></label>
+              <textarea id="inquiryMessage" name="message" required placeholder="婚活のお悩みやご希望、ご相談したい内容をご記入ください。"></textarea>
+            </div>
+          </div>
+          <p class="formNote">このフォームの入力内容は当サイトには保存されません。「LINEで送信する」を押すと公式LINEのトーク画面が開き、入力した内容がメッセージ欄に入ります。内容をご確認のうえLINE上で送信してください。</p>
+          <div class="formActions">
+            <button class="btn btnPrimary" type="submit">LINEで送信する <span>↗</span></button>
+            <a class="btn btnGhost" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">公式LINEを開く</a>
+          </div>
+          <div class="formStatus" id="lineFormStatus" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
     <section class="section contact" id="sns">
       <div class="artBg art8"></div>
       <div class="inner">
         <div class="head center reveal">
           <div class="eyebrow">Follow & contact</div>
-          <h2>日々の発信と、ご相談はこちら。</h2>
-          <p>まずは気軽に覗いてみてください。各SNSから婚活アドバイザー 愛の発信をご覧いただけます。</p>
+          <h2>ご相談は公式LINEから。</h2>
+          <p>婚活のご相談は公式LINEで承ります。Instagram・TikTok・YouTubeでは日々の発信をご覧いただけます。</p>
         </div>
         <div class="contactGrid">
-          <a class="social reveal" href="https://www.instagram.com/marriage_agency888?igsh=dmllMHQ5NDhkNm5n" target="_blank" rel="noopener"><div class="miniArt art9"></div><b>Instagram</b><span>アカウントを見る →</span></a>
-          <a class="social reveal" href="https://lite.tiktok.com/t/ZS9FuH7sfUEJp-4ppun/" target="_blank" rel="noopener"><div class="miniArt art2"></div><b>TikTok</b><span>アカウントを見る →</span></a>
-          <a class="social reveal" href="https://youtube.com/channel/UCbVx9lENEbV5nfJdUZO9R6g?si=_cr5Zw6pA-MS_gUK" target="_blank" rel="noopener"><div class="miniArt art3"></div><b>YouTube</b><span>アカウントを見る →</span></a>
+          <a class="social lineCard reveal" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener"><div class="miniArt art6"></div><b>公式LINE</b><span>婚活の相談をする →</span></a>
+          <a class="social reveal" href="https://www.instagram.com/marriage_agency888?igsh=dmllMHQ5NDhkNm5n" target="_blank" rel="noopener"><div class="miniArt art9"></div><b>Instagram</b><span>発信を見る →</span></a>
+          <a class="social reveal" href="https://www.tiktok.com/@marriage_agency_888?_r=1&_t=ZS-99y0zD0qbhK" target="_blank" rel="noopener"><div class="miniArt art2"></div><b>TikTok</b><span>発信を見る →</span></a>
+          <a class="social reveal" href="https://youtube.com/channel/UCbVx9lENEbV5nfJdUZO9R6g?si=_cr5Zw6pA-MS_gUK" target="_blank" rel="noopener"><div class="miniArt art3"></div><b>YouTube</b><span>発信を見る →</span></a>
         </div>
       </div>
     </section>
@@ -582,13 +682,13 @@
         <div class="eyebrow">Start your story</div>
         <h2>その一歩が、<br>未来の笑顔につながる。</h2>
         <p>幸せな結婚を思い描くことから、婚活は始まります。まずは今の気持ちを聞かせてください。</p>
-        <a class="btn btnPrimary" href="https://www.instagram.com/marriage_agency888?igsh=dmllMHQ5NDhkNm5n" target="_blank" rel="noopener">Instagramで相談する <span>↗</span></a>
+        <a class="btn btnPrimary" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">LINEで相談する <span>↗</span></a>
       </div></div>
     </section>
   </main>
 
   <footer><div class="footerInner"><div><b>婚活アドバイザー 愛</b><small> MARRIAGE AGENCY</small></div><small>© <span id="year"></span> 婚活アドバイザー 愛</small></div></footer>
-  <a class="mobileCta" href="https://www.instagram.com/marriage_agency888?igsh=dmllMHQ5NDhkNm5n" target="_blank" rel="noopener">Instagramで相談する ↗</a>
+  <a class="mobileCta" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">LINEで相談する ↗</a>
 
   <script>
     document.getElementById("year").textContent=new Date().getFullYear();
@@ -601,6 +701,39 @@
       },{threshold:.09});
       targets.forEach(function(el){observer.observe(el);});
     }else{targets.forEach(function(el){el.classList.add("visible");});}
+
+    const inquirySection=document.getElementById("inquiry");
+    const mobileCta=document.querySelector(".mobileCta");
+    if(inquirySection&&mobileCta&&"IntersectionObserver" in window){
+      const inquiryObserver=new IntersectionObserver(function(entries){
+        mobileCta.classList.toggle("hidden",entries[0].isIntersecting);
+      },{threshold:.08});
+      inquiryObserver.observe(inquirySection);
+    }
+
+    const lineInquiryForm=document.getElementById("lineInquiryForm");
+    if(lineInquiryForm){
+      lineInquiryForm.addEventListener("submit",function(event){
+        event.preventDefault();
+        if(!lineInquiryForm.reportValidity())return;
+        const data=new FormData(lineInquiryForm);
+        const message=[
+          "【婚活お問い合わせ】",
+          "お名前："+data.get("name"),
+          "ふりがな："+data.get("kana"),
+          "メールアドレス："+data.get("email"),
+          "住所："+data.get("address"),
+          "電話番号："+data.get("phone"),
+          "",
+          "お問い合わせ内容：",
+          data.get("message")
+        ].join("\n");
+        const url="https://line.me/R/oaMessage/%40312shqtw/?"+encodeURIComponent(message);
+        const status=document.getElementById("lineFormStatus");
+        if(status)status.textContent="LINEを開いています。入力内容をご確認のうえ送信してください。";
+        window.location.href=url;
+      });
+    }
   </script>
 </body>
 </html>
