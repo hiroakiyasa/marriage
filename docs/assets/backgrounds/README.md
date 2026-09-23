@@ -1,0 +1,14 @@
+# Abstract background assets
+
+These ten backgrounds were sourced from the user's iCloud Drive API folder and optimized to JPEG for web delivery.
+
+1. 3D37515F-448D-464F-A9C9-43BEF4B64280.PNG -> blossom-01.jpg
+2. 40F6212F-9ED9-4DAB-9AAC-9EE5EDA67612.PNG -> blossom-02.jpg
+3. 635B3EC6-862C-4EBD-80ED-332360446B5A.PNG -> blossom-03.jpg
+4. 6E37946E-ED38-48A0-B205-B81A472CA3EC.PNG -> blossom-04.jpg
+5. 71C8355C-DEA0-4FC7-A8CF-1509C3F70152.PNG -> blossom-05.jpg
+6. 904676C6-2725-42BC-843D-4FEFF5CC9D1D.PNG -> blossom-06.jpg
+7. BEDD8112-8B96-4176-822B-B48516F12569.PNG -> blossom-07.jpg
+8. C89801C2-68A1-4B65-86A4-7C4C86348834.PNG -> blossom-08.jpg
+9. CC885825-AB55-4211-82E2-0F501F543307.PNG -> blossom-09.jpg
+10. E0EEC6CE-39EE-49DA-A76C-DEB94D710B24.PNG -> blossom-10.jpg
