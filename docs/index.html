@@ -23,7 +23,9 @@
     a{text-decoration:none;color:inherit}
     img{display:block;width:100%}
     button,a{-webkit-tap-highlight-color:transparent}
-    .topnote{height:32px;display:grid;place-items:center;background:var(--dark);color:#fff;font-size:10px;letter-spacing:.19em}
+    .topnote{height:42px;display:flex;align-items:center;justify-content:center;background:var(--dark);color:#fff}
+    .topBrand{font-family:Georgia,"Times New Roman",serif;font-size:15px;letter-spacing:.22em;text-transform:lowercase}
+    .topLove{display:none}
     .navwrap{position:fixed;z-index:50;inset:42px 0 auto;padding:0 18px;pointer-events:none}
     .nav{pointer-events:auto;width:min(1180px,100%);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:10px 11px 10px 18px;border:1px solid rgba(255,255,255,.8);border-radius:999px;background:rgba(255,253,250,.87);backdrop-filter:blur(18px);box-shadow:0 10px 40px rgba(72,49,43,.09)}
     .brand{display:flex;align-items:center;gap:11px;min-width:max-content}
@@ -70,6 +72,8 @@
     .heroCopy{padding-top:26px}
     .heroKicker{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid rgba(205,155,153,.35);color:#9b5b61;font-size:10px;font-weight:800;letter-spacing:.14em;backdrop-filter:blur(10px)}
     .heroKicker i{width:7px;height:7px;border-radius:50%;background:#d9878e;box-shadow:0 0 0 5px rgba(217,135,142,.13)}
+    .consultBadge{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.84);border:1px solid rgba(199,145,145,.38);box-shadow:0 8px 24px rgba(107,67,63,.08);color:#9e5d65;font-size:11px;font-weight:800;letter-spacing:.08em}
+    .consultBadge:before{content:"♥";color:#dc8f97;font-size:12px}
     .hero h1{margin:25px 0 24px;font-family:var(--serif);font-size:clamp(50px,5vw,68px);font-weight:500;line-height:1.28;letter-spacing:.045em}
     .hero h1 em{font-style:normal;color:var(--rose);position:relative;white-space:nowrap}
     .hero h1 em:after{content:"";position:absolute;left:-3%;right:-3%;bottom:.02em;height:.24em;background:linear-gradient(90deg,rgba(240,178,182,.16),rgba(240,178,182,.48),rgba(240,178,182,.14));border-radius:999px;z-index:-1}
@@ -232,6 +236,25 @@
     .priceContact{position:relative;z-index:2;margin-top:24px;padding:23px 26px;border-radius:24px;background:rgba(255,255,255,.86);border:1px solid #eadbd7;display:flex;align-items:center;justify-content:space-between;gap:20px}
     .priceContact p{margin:0;color:var(--muted);font-size:12px}
 
+    .counseling{background:#fffaf7}
+    .counseling .artBg{inset:0;opacity:.24}
+    .counselCard{position:relative;z-index:2;display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:center;padding:54px;border-radius:38px;background:rgba(255,255,255,.92);border:1px solid #ead9d5;box-shadow:var(--shadow);overflow:hidden}
+    .counselCard:after{content:"";position:absolute;right:-100px;bottom:-150px;width:430px;height:430px;border-radius:50%;background:url("assets/backgrounds/blossom-05.jpg") center/cover no-repeat;opacity:.16;pointer-events:none}
+    .counselCard>*{position:relative;z-index:2}
+    .counselTag{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff4f2;border:1px solid #edcfcc;color:var(--rose);font-size:10px;font-weight:800;letter-spacing:.12em}
+    .counselTag:before{content:"♥";color:#dc8f97}
+    .counselCopy h2{margin:16px 0 12px;font-family:var(--serif);font-size:clamp(34px,4vw,52px);font-weight:500;line-height:1.42}
+    .counselCopy p{margin:0;color:var(--muted);font-family:var(--serif);font-size:15px;line-height:2}
+    .counselFacts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}
+    .counselFact{padding:16px 12px;border-radius:17px;background:#fff9f7;border:1px solid #efdfdb;text-align:center}
+    .counselFact b{display:block;color:var(--rose);font-family:var(--serif);font-size:20px}
+    .counselFact span{display:block;margin-top:3px;color:var(--muted);font-size:9px}
+    .counselAction{padding:32px;border-radius:28px;background:linear-gradient(145deg,#4b3633,#624742);color:#fff}
+    .counselAction h3{margin:0 0 10px;font-family:var(--serif);font-size:25px;font-weight:500}
+    .counselAction p{margin:0 0 20px;color:#f1dfdb;font-size:12px;line-height:1.9}
+    .counselAction .btn{width:100%;background:linear-gradient(135deg,#bd5d70,#e38d95);color:#fff;border:0}
+    .counselSecondary{display:block;margin-top:13px;text-align:center;color:#f3dedd;font-size:11px;text-decoration:underline;text-underline-offset:4px}
+
     .inquiry{background:#f8efed}
     .inquiry .artBg{inset:0;opacity:.22}
     .inquiryGrid{display:grid;grid-template-columns:.78fr 1.22fr;gap:54px;align-items:start}
@@ -285,6 +308,7 @@
       .heroVisual{min-height:650px;width:min(640px,100%);margin:0 auto}
       .hero .artBg{inset:26% -25% -5% 0}
       .introGrid,.advisorGrid,.priceGridWrap,.inquiryGrid{grid-template-columns:1fr;gap:50px}
+      .counselCard{grid-template-columns:1fr;gap:24px;padding:34px}
       .advisorVisual{position:relative;top:auto}
       .inquiryIntro{position:relative;top:auto}
       .contactGrid{grid-template-columns:repeat(2,1fr)}
@@ -299,7 +323,13 @@
     }
     @media(max-width:660px){
       body{padding-bottom:74px}
-      .topnote{height:36px;font-size:10px;letter-spacing:.28em;text-transform:lowercase}
+      .topnote{height:94px;position:relative;display:flex;flex-direction:column;gap:2px;overflow:hidden;background:#4a3531}
+      .topBrand{position:relative;font-family:Georgia,"Times New Roman",serif;font-size:31px;line-height:1.05;letter-spacing:.12em;color:#fff8f5;text-transform:lowercase}
+      .topBrand:before,.topBrand:after{content:"";position:absolute;top:54%;width:58px;height:18px;border-top:1.5px solid rgba(255,246,243,.88);border-radius:50%}
+      .topBrand:before{right:calc(100% + 14px);transform:rotate(8deg)}
+      .topBrand:after{left:calc(100% + 14px);transform:rotate(-8deg)}
+      .topLove{display:flex;align-items:center;gap:11px;color:#e5a4aa;font-size:13px;line-height:1}
+      .topLove:before,.topLove:after{content:"";display:block;width:55px;height:1px;background:rgba(255,244,241,.64)}
       .navwrap{display:none}
       .section{padding:82px 16px}
       .hero{position:relative;isolation:isolate;min-height:780px;padding:0 16px 72px;background:#fff9f7}
@@ -356,6 +386,11 @@
       .legalBox{padding:22px 19px}
       .priceContact{display:block;padding:20px}
       .priceContact .btn{width:100%;margin-top:14px}
+      .counselCard{padding:24px 18px;border-radius:28px}
+      .counselFacts{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+      .counselFact{padding:13px 7px}
+      .counselFact b{font-size:17px}
+      .counselAction{padding:24px 18px}
       .inquiryForm{padding:22px 18px}
       .formGrid{grid-template-columns:1fr}
       .field.full{grid-column:auto}
@@ -376,11 +411,14 @@
   </style>
 </head>
 <body>
-  <div class="topnote">marriage agency</div>
+  <div class="topnote" aria-label="marriage agency">
+    <span class="topBrand">marriage agency</span>
+    <span class="topLove" aria-hidden="true">♥</span>
+  </div>
   <div class="navwrap">
     <nav class="nav" aria-label="メインナビゲーション">
       <a class="brand" href="#top"><span class="brandMark">愛</span><span><b>婚活アドバイザー 愛</b><small>MARRIAGE AGENCY</small></span></a>
-      <div class="navlinks"><a href="#concept">想い</a><a href="#support">サポート</a><a href="#advisor">アドバイザー</a><a href="#price">料金</a><a href="#inquiry">お問い合わせ</a><a href="#sns">SNS</a></div>
+      <div class="navlinks"><a href="#concept">想い</a><a href="#support">サポート</a><a href="#advisor">アドバイザー</a><a href="#price">料金</a><a href="#counseling">無料カウンセリング</a><a href="#inquiry">お問い合わせ</a><a href="#sns">SNS</a></div>
       <a class="btn btnPrimary" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">お問い合わせ <span>↗</span></a>
     </nav>
   </div>
@@ -391,11 +429,12 @@
       <div class="heroGrid">
         <div class="heroCopy reveal">
           <div class="heroKicker"><i></i> MARRIAGE, FOR YOUR HAPPINESS</div>
+          <div class="consultBadge">無料カウンセリング受付中</div>
           <h1>あなたらしく、<br><em>愛される未来へ。</em></h1>
           <p class="heroLead">上質で、あたたかく、前向きに。あなたらしい魅力を大切にしながら、理想のご縁と幸せな結婚へ寄り添います。</p>
           <div class="heroActions">
-            <a class="btn btnPrimary" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">お問い合わせ <span>↗</span></a>
-            <a class="btn btnGhost" href="#price">料金を見る <span>↓</span></a>
+            <a class="btn btnPrimary" href="#counseling">60分無料カウンセリング <span>↓</span></a>
+            <a class="btn btnGhost" href="#inquiry">お問い合わせ <span>↓</span></a>
           </div>
           <div class="stats">
             <div class="stat"><b>2プラン</b><span>シンプル・スタンダード</span></div>
@@ -613,13 +652,37 @@
       </div>
     </section>
 
+    <section class="section counseling" id="counseling">
+      <div class="artBg art5"></div>
+      <div class="inner">
+        <div class="counselCard reveal">
+          <div class="counselCopy">
+            <div class="counselTag">無料カウンセリング受付中</div>
+            <h2>まずは60分、<br>今の婚活を一緒に整理。</h2>
+            <p>婚活を始める前の方も、活動中で迷っている方も大丈夫です。今のお悩みや希望を伺いながら、あなたに合う進め方を一緒に整理します。</p>
+            <div class="counselFacts">
+              <div class="counselFact"><b>60分</b><span>じっくり相談</span></div>
+              <div class="counselFact"><b>無料</b><span>初回カウンセリング</span></div>
+              <div class="counselFact"><b>全国</b><span>オンライン対応</span></div>
+            </div>
+          </div>
+          <div class="counselAction">
+            <h3>60分無料カウンセリング</h3>
+            <p>公式LINEからお申し込みください。LINEを開くと「60分無料カウンセリング希望」のメッセージを送れる状態になります。</p>
+            <a class="btn" href="https://line.me/R/oaMessage/%40312shqtw/?%E3%80%9060%E5%88%86%E7%84%A1%E6%96%99%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0%E5%B8%8C%E6%9C%9B%E3%80%91%0A60%E5%88%86%E7%84%A1%E6%96%99%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" target="_blank" rel="noopener">60分無料カウンセリングを申し込む <span>↗</span></a>
+            <a class="counselSecondary" href="#inquiry">通常のお問い合わせはこちら</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section inquiry" id="inquiry">
       <div class="artBg art4"></div>
       <div class="inner inquiryGrid">
         <div class="inquiryIntro reveal">
-          <div class="eyebrow">LINE inquiry</div>
-          <h2>LINEでお問い合わせ</h2>
-          <p>必要事項を入力すると、婚活アドバイザー愛の公式LINEトーク画面に内容を引き継げます。入力内容を確認し、LINE上で送信してください。</p>
+          <div class="eyebrow">Inquiry</div>
+          <h2>お問い合わせ</h2>
+          <p>料金・活動内容・その他のご質問はこちらから。60分無料カウンセリングのお申し込みとは別に、通常のお問い合わせとして公式LINEへ内容を引き継げます。</p>
           <a class="btn btnGhost lineDirect" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">公式LINEを直接開く <span>↗</span></a>
         </div>
         <form class="inquiryForm reveal" id="lineInquiryForm">
@@ -688,7 +751,7 @@
   </main>
 
   <footer><div class="footerInner"><div><b>婚活アドバイザー 愛</b><small> MARRIAGE AGENCY</small></div><small>© <span id="year"></span> 婚活アドバイザー 愛</small></div></footer>
-  <a class="mobileCta" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">お問い合わせ ↗</a>
+  <a class="mobileCta" href="#counseling">60分無料カウンセリング ↓</a>
 
   <script>
     document.getElementById("year").textContent=new Date().getFullYear();
@@ -703,12 +766,19 @@
     }else{targets.forEach(function(el){el.classList.add("visible");});}
 
     const inquirySection=document.getElementById("inquiry");
+    const counselingSection=document.getElementById("counseling");
+    const heroSection=document.querySelector(".hero");
     const mobileCta=document.querySelector(".mobileCta");
-    if(inquirySection&&mobileCta&&"IntersectionObserver" in window){
-      const inquiryObserver=new IntersectionObserver(function(entries){
-        mobileCta.classList.toggle("hidden",entries[0].isIntersecting);
+    if(mobileCta&&"IntersectionObserver" in window){
+      const visibleCtaSections=new Set();
+      const ctaObserver=new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting)visibleCtaSections.add(entry.target);
+          else visibleCtaSections.delete(entry.target);
+        });
+        mobileCta.classList.toggle("hidden",visibleCtaSections.size>0);
       },{threshold:.08});
-      inquiryObserver.observe(inquirySection);
+      [heroSection,counselingSection,inquirySection].filter(Boolean).forEach(function(section){ctaObserver.observe(section);});
     }
 
     const lineInquiryForm=document.getElementById("lineInquiryForm");
