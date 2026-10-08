@@ -496,6 +496,16 @@
       .happyCopy h3{font-size:clamp(20px,5.6vw,25px);line-height:1.65}
       .happyCopy p{font-size:12px;line-height:1.9}
     }
+
+    /* Keep the flow heading in meaningful phrases */
+    .flow .head h2{font-size:clamp(23px,3vw,32px);font-weight:400;line-height:1.6;letter-spacing:.04em}
+    .flow .head h2 span{display:inline-block;white-space:nowrap}
+    .flow .head h2 span+span{margin-left:.3em}
+    @media(max-width:700px){
+      .flow .head h2{font-size:25px}
+      .flow .head h2 span{display:block}
+      .flow .head h2 span+span{margin-left:0}
+    }
   </style>
 </head>
 <body>
@@ -628,8 +638,7 @@
       <div class="artBg art4"></div>
       <div class="inner">
         <div class="head center reveal">
-          <div class="eyebrow">Support flow</div>
-          <h2>幸せへつながる、4つのステップ。</h2>
+          <h2><span>幸せへ繋がる</span><span>４つのステップ</span></h2>
           <p>出会いから日々の相談まで、活動の流れを分かりやすく。</p>
         </div>
         <div class="flowWrap reveal">
