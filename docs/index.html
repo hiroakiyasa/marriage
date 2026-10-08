@@ -517,6 +517,17 @@
     .futureHead h2{font-size:clamp(21px,3vw,28px);font-weight:400;line-height:1.6;letter-spacing:.03em}
     .futureHead p{font-size:12px;line-height:1.9}
     @media(max-width:700px){.futureHead{padding:24px 20px}.futureHead h2{font-size:22px}.futureHead p{font-size:12px}}
+
+    .marriageJourney{padding-top:48px;padding-bottom:48px}
+    .marriageJourney .head{margin-bottom:24px}
+    .marriageJourney .head h2{font-size:26px;font-weight:400;line-height:1.6}
+    .journeyList{list-style:none;margin:0 auto;padding:0;max-width:780px}
+    .journeyStep{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;padding:22px 0;border-top:1px solid #e4d9d1}
+    .journeyNumber{font-family:var(--serif);font-size:20px;color:#b47a82;line-height:1.5}
+    .journeyStep h3{margin:0 0 10px;font-family:var(--serif);font-size:19px;font-weight:400;line-height:1.5}
+    .journeyStep p{margin:0 0 14px;font-size:13px;line-height:1.9;color:var(--muted);word-break:normal;line-break:strict}
+    .journeyStep p:last-child{margin-bottom:0}
+    @media(max-width:700px){.marriageJourney{padding-top:36px;padding-bottom:36px}.marriageJourney .head h2{font-size:24px}.journeyStep{gap:10px;padding:18px 0}.journeyStep h3{font-size:18px}.journeyStep p{font-size:12px}}
   </style>
 </head>
 <body>
@@ -748,6 +759,21 @@
       <div class="inner happyBand reveal">
         <img src="assets/wedding/garden-walk.jpg" alt="夕暮れの庭園を歩く新郎新婦" loading="lazy">
         <div class="happyCopy"><h3>出会う事は幸せの始まり</h3><p>理想を追い続けるのではなくあなたが自然体でいられるお相手とのご縁を大切に。未来を焦らず、でも止まらず一緒に進んでいきます。</p></div>
+      </div>
+    </section>
+
+    <section class="section marriageJourney" id="marriage-journey">
+      <div class="inner">
+        <div class="head center"><h2>ご成婚までの流れ</h2></div>
+        <ol class="journeyList">
+          <li class="journeyStep"><div class="journeyNumber">01</div><div><h3>無料カウンセリング</h3><p>婚活に興味を持った方は、まずはお気軽にお問い合わせください。<br>ご都合の良い日時で調整し、無料カウンセリングをさせていただきます。対面・オンラインどちらでも対応しています。<br>あなたのプロフィールや今までの恋愛・婚活状況、お相手のご希望条件などを差し支えない範囲でお聞きし、どうやったら婚活がうまくいくのか、あなたに合ったベストなサポート内容をご提案いたします。</p><p>※ご入会のご希望をいただいた際、入会審査があります。入会審査の結果、ご入会のご希望に添えない場合があります。</p></div></li>
+          <li class="journeyStep"><div class="journeyNumber">02</div><div><h3>ご入会</h3><p>ご入会の意志が固まりましたらお知らせください。<br>初回カウンセリング、プロフィール撮影のお日にちを調整します。<br>初回カウンセリングでは、入会手続き、オリエンテーション、プロフィール作成のためのヒアリングを行います。<br>プロフィール写真は当社提携のスタジオをお勧めしています。（撮影代はスタジオへお支払い）<br>婚活を効果的に進める上で、プロフィール写真はとても重要なポイントですので、当社アドバイザーが同行し、素敵な写真にするためのアドバイスをします。</p><p>さらに、あなたの魅力が伝わるプロフィールをアドバイザーと共に作成します。<br>プロフィールを充実させることで、お見合いや仮交際（プレ交際）につながる確率が上がります。</p><p>※入会時の初回カウンセリングは入会審査を兼ねており、審査の結果、ご入会のご希望に添えない場合があります。</p></div></li>
+          <li class="journeyStep"><div class="journeyNumber">03</div><div><h3>活動開始</h3><p>必要書類・写真・プロフィールが揃いましたら、IBJのシステムにお客様のプロフィールを登録し、いよいよ活動開始となります。</p><p>新規入会者はプロフィールが目立つように設定されていますので、お見合いのお申込が来やすくなります。また、ご自身からも積極的にお見合いを申し込みましょう。</p></div></li>
+          <li class="journeyStep"><div class="journeyNumber">04</div><div><h3>お見合い</h3><p>お見合いが成立したら、有名ホテルのラウンジ等でお相手とお会いします。遠方の方等はオンライン（Zoom）でお見合いを行うこともあります。</p><p>お見合い後、アドバイザーと共に振り返りを行い、次につなげられるように、多角的な視点でアドバイスをいたします。</p></div></li>
+          <li class="journeyStep"><div class="journeyNumber">05</div><div><h3>仮交際</h3><p>双方が交際を希望したら、連絡先を交換して仮交際（プレ交際）スタートです。<br>この期間中は、同時に複数人の方と交際が可能です。LINE等やデートを重ねてお互いの結婚観や人柄などを理解し、コミュニケーションを深めていきましょう。</p><p>アドバイザーが服装や場所の選び方、デートの流れや気持ちの伝え方などをアドバイスし、お二人の交際をしっかりサポートします。<br>原則、お見合いをした日から3ヶ月（最長6ヶ月）で成婚を目指します。</p></div></li>
+          <li class="journeyStep"><div class="journeyNumber">06</div><div><h3>真剣交際</h3><p>お互いに「この人と結婚を前提としたお付き合いをしたい」と思ったら真剣交際に進みます。その際はお相手を1人に決めて、ご成婚に向けて、その方との関係性をより一層深めていただきます。</p></div></li>
+          <li class="journeyStep"><div class="journeyNumber">07</div><div><h3>ご成婚</h3><p>結婚の意思が固まりましたら、プロポーズをします。<br>指輪やレストランなどのご用意はアドバイザーがお手伝いさせていただきます。<br>プロポーズが成功したら晴れてご成婚（婚約）です。</p><p>結婚式の準備、新婚旅行、子育て、夫婦関係、お住まいなどに関するお悩みがあれば、お気軽にご相談ください</p></div></li>
+        </ol>
       </div>
     </section>
 
