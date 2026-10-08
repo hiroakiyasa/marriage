@@ -528,6 +528,17 @@
     .journeyStep p{margin:0 0 14px;font-size:13px;line-height:1.9;color:var(--muted);word-break:normal;line-break:strict}
     .journeyStep p:last-child{margin-bottom:0}
     @media(max-width:700px){.marriageJourney{padding-top:36px;padding-bottom:36px}.marriageJourney .head h2{font-size:24px}.journeyStep{gap:10px;padding:18px 0}.journeyStep h3{font-size:18px}.journeyStep p{font-size:12px}}
+
+    .weddingPortraitPair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;max-width:740px;width:100%;margin:auto}
+    .weddingPortraitPair .brideFrame{width:100%;max-width:330px;margin:0 auto}
+    .weddingPortraitPair .brideFrame img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+    @media(max-width:700px){
+      .weddingPortraitPair{gap:18px;max-width:450px}
+      .weddingPortraitPair .brideFrame{width:100%}
+      .weddingPortraitPair .brideFrame:before{inset:18px -6px -12px 12px}
+      .weddingPortraitPair .brideFrame img{border-radius:100px 100px 18px 18px}
+      .weddingPortraitPair .brideBadge{width:72px;height:72px;right:-4px;bottom:10px;font-size:9px;line-height:1.6}
+    }
   </style>
 </head>
 <body>
@@ -570,9 +581,15 @@
     <section class="section intro" id="concept">
       <div class="artBg art2"></div>
       <div class="inner introGrid">
-        <div class="brideFrame reveal">
-          <img src="assets/wedding/bride-mirror.jpg" alt="鏡の前で身支度をする花嫁" loading="lazy">
-          <div class="brideBadge">自分らしく<br>美しく<br>前向きに</div>
+        <div class="weddingPortraitPair">
+          <div class="brideFrame reveal">
+            <img src="assets/wedding/bride-mirror.jpg" alt="鏡の前で身支度をする花嫁" loading="lazy">
+            <div class="brideBadge">自分らしく<br>美しく<br>前向きに</div>
+          </div>
+          <div class="brideFrame groomFrame reveal">
+            <img src="assets/wedding/groom-portrait.jpg" alt="花婿のポートレート" loading="lazy">
+            <div class="brideBadge">自分らしく<br>誠実に<br>前向きに</div>
+          </div>
         </div>
 
       </div>
