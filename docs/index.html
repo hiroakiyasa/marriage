@@ -435,6 +435,18 @@
     /* Wider, slimmer free counseling badge */
     .consultBadge{display:flex;width:min(100%,390px);justify-content:center;min-height:42px;padding:7px 22px;font-size:17px;line-height:1.5;letter-spacing:.06em}
     .consultBadge:before{font-size:15px}
+
+    /* Tighten space around the introduction and advisor portraits */
+    .intro,.advisor{padding-top:48px}
+    .introGrid{row-gap:20px}
+    .advisorGrid{row-gap:18px}
+    .advisorCaption>h2{margin-top:8px}
+    @media(max-width:700px){
+      .hero{padding-bottom:36px}
+      .intro,.advisor{padding-top:32px}
+      .introGrid{gap:18px}
+      .advisorGrid{gap:16px}
+    }
   </style>
 </head>
 <body>
