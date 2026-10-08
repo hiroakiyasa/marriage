@@ -788,11 +788,10 @@
     </section>
   </main>
 
-  <footer><div class="footerInner"><div><b>婚活アドバイザー 愛</b><small> MARRIAGE AGENCY</small></div><small>© <span id="year"></span> 婚活アドバイザー 愛</small></div></footer>
+  
   <a class="mobileCta" href="#counseling">60分無料カウンセリング ↓</a>
 
   <script>
-    document.getElementById("year").textContent=new Date().getFullYear();
     const targets=document.querySelectorAll(".reveal");
     if("IntersectionObserver" in window){
       const observer=new IntersectionObserver(function(entries){
