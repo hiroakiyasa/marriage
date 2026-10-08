@@ -422,6 +422,15 @@
     /* Make the top counseling text easier to read */
     .consultBadge{font-size:14px;color:#81434b;letter-spacing:.04em}
     .heroActions a[href="#counseling"]{font-size:15px}
+
+    /* Place Japanese advisor information directly under the portrait */
+    .advisorVisual:before{display:none}
+    .advisorPhoto{position:relative}
+    .advisorPhoto:before{content:"";position:absolute;inset:-24px 20% 20% -24px;border:1px solid rgba(185,126,127,.48);border-radius:160px 160px 28px 28px}
+    .advisorCaption{width:calc(100% + 24px);margin-left:-24px;text-align:center}
+    .advisorCaption>h2{margin:16px 0 8px;font-family:var(--serif);font-size:clamp(23px,5vw,30px);font-weight:400;line-height:1.48;letter-spacing:.08em}
+    .advisorCaption .advisorRole{margin:0;font-size:12px;letter-spacing:.03em;line-height:1.9;color:#826d68}
+    @media(max-width:700px){.advisorGrid{gap:24px}.advisorPhoto:before{border-radius:120px 120px 25px 25px}}
   </style>
 </head>
 <body>
@@ -517,11 +526,14 @@
     <section class="section advisor" id="advisor">
       <div class="artBg art10"></div>
       <div class="inner advisorGrid">
-        <div class="advisorVisual reveal"><img src="assets/profile.jpg" alt="婚活アドバイザー 愛" loading="lazy"></div>
+        <div class="advisorVisual reveal">
+          <div class="advisorPhoto"><img src="assets/profile.jpg" alt="婚活アドバイザー 愛" loading="lazy"></div>
+          <div class="advisorCaption">
+            <h2>婚活アドバイザー 愛</h2>
+            <div class="advisorRole">IBJ正規加盟店<br>愛知拠点・対面　全国オンライン対応</div>
+          </div>
+        </div>
         <div class="advisorCopy reveal">
-          <div class="eyebrow">Your adviser</div>
-          <h2>婚活アドバイザー 愛</h2>
-          <div class="advisorRole">IBJ正規加盟店 / AICHI & ONLINE</div>
           <div class="advisorMessage">
             <p class="advisorLead">愛知県を拠点に、IBJ正規加盟店の婚活アドバイザーとして活動しています。<br>愛知県内は対面、全国オンラインにも対応しています。</p>
             <p>私は昔から、恋愛や結婚、夫婦について人と話すことが好きで、友人や職場、お客様から恋愛相談を受ける機会も多く、これまでたくさんのお話を聞かせていただいてきました。</p>
