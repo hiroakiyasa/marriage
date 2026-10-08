@@ -546,6 +546,11 @@
     @media(max-width:700px){.phoneContact{padding-bottom:100px}}
 
     .contact .head h2{font-size:clamp(18px,4.7vw,30px);font-weight:400;letter-spacing:0;white-space:nowrap;line-height:1.6}
+
+    .phoneContact a{display:inline-flex;flex-direction:column;align-items:center;gap:7px;padding:16px 28px;border:1px solid #bd858b;border-radius:16px;background:#fffdfb;color:#89535b;min-height:64px}
+    .phoneContact a b{font-size:22px;font-weight:400}
+    .phoneContact a small{font-family:var(--sans, sans-serif);font-size:12px;letter-spacing:.03em}
+    .phoneContact a:focus-visible{outline:2px solid #89535b;outline-offset:4px}
   </style>
 </head>
 <body>
@@ -897,7 +902,7 @@
         <a class="btn btnPrimary" href="https://line.me/R/ti/p/@312shqtw" target="_blank" rel="noopener">お問い合わせ <span>↗</span></a>
       </div></div>
     </section>
-    <div class="phoneContact"><span>電話番号</span><a href="tel:09078599530">090-7859-9530</a></div>
+    <div class="phoneContact"><span>お電話でのお問い合わせ</span><a href="tel:09078599530" aria-label="090-7859-9530に電話する"><b>☎ 090-7859-9530</b><small>タップして電話する</small></a></div>
   </main>
 
   
